@@ -10,6 +10,12 @@ The app allows users to play a game where they choose an operation to focus on (
 
 When the game is over the user is presented with a table of the problems they got right and wrong, and also how long they spent on each problem. This allows them to learn from their mistakes and discover patterns in which problems they are unable to solve quickly.
 
+To try it out,type the following command to install dependencies:
+npm install
+
+Then run the following command to setup the dev server and go to the localhost port provided:
+npm run dev
+
 ---
 
 ##### Design choices
