@@ -12,7 +12,7 @@ When the game is over the user is presented with a table of the problems they go
 
 ---
 
-##### Design choices
+##### Design choice
 
 First I want to clearly disclose my use of generative AI for this project as it's explicitly accepted as reasonable on the Final Project description page. I used Cursor as my IDE which integrates many different models, and gpt-4o and Claude-sonnet-3.5 was mainly used. This was my first experience using generative AI to code and I made many mistakes and learned a lot about it's limitations especially regarding the design process once a codebase grows.
 
