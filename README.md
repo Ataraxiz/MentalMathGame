@@ -52,7 +52,6 @@ This being my first experience with React, I was very surprised by how many diff
 - **HighScores.jsx**:  
    Queries the database and displays the relevant High Score table based on user-selected options.
 
----
 
 ##### Styles
 
@@ -67,7 +66,6 @@ This is admittedly a mess. I originally thought every component needed it's own 
 - **Rest of the CSS files**:  
    The rest of the styling files relate directly to their respective namesake components.
 
----
 
 ##### Other Files
 
