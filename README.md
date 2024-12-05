@@ -28,28 +28,28 @@ This being my first experience with React, I was very surprised by how many diff
 
 ##### Key Files
 
-- **index.html**:  
+- **index.html**:
    This is the only html file in the project and the first file that the browser loads. It just contains the extremely basic HTML structure and the root script element where React injects the entire application from the main.jsx.
-- **main.jsx**:  
+- **main.jsx**:
    This file is also very barebones and handles how the app is started and mounted to the Document Object Model (DOM), and is kept separate from App.jsx to follow the principle of "Separation of concerns".
-- **App.jsx**:  
+- **App.jsx**:
   This is the main control centre of the application and it serves two very key functions. First, it calls the function that initializes the SQLite database. Second, it is responsible for all the routing between different parts of the app.
-- **database.js**:  
+- **database.js**:
    This file, as the name suggests, manages the database logic for the High Scores. It initializes the database, creates the two different tables and provides the functions for saving and retrieving data from it. It also handles persistence between sessions by storing the database state in the browser's localStorage.
 
 ##### Components
 
-- **MainMenu.jsx**:  
+- **MainMenu.jsx**:
    This presents the main navigation for the game between the actual game, practice mode and the High Score table.
-- **GameModeSelect.jsx**:  
+- **GameModeSelect.jsx**:
    This is where the different game options are presented to and selected by the player.
-- **GameScreen.jsx**:  
+- **GameScreen.jsx**:
    This renders the actual game screen that presents the problems to be solved. It also shows the player key details how many lives and points they have and also how much time they have left. It then renders the GameOver component once the game is over.
-- **GameOver.jsx**:  
+- **GameOver.jsx**:
    Displays the Game Over screen when called by `GameScreen.jsx`. It shows a table of the problems solved or failed and allows the player to save their score to the High Scores by entering a username.
-- **PracticeMode.jsx**:  
+- **PracticeMode.jsx**:
    Functions like an alternative to `GameModeSelect` but with fewer limitations. It lets players practice multiple operations simultaneously, set their own time limit, or even play without one. Initially intended as a standalone game mode but was reworked into a sandbox-style option to avoid creating too many High Score tables for various combinations.
-- **HighScores.jsx**:  
+- **HighScores.jsx**:
    Queries the database and displays the relevant High Score table based on user-selected options.
 
 
@@ -59,15 +59,15 @@ This is admittedly a mess. I originally thought every component needed it's own 
 
 ###### Important Style Files
 
-- **index.css**:  
+- **index.css**:
    Here I ended up defining a lot of variables that was used repeatedly.
-- **shared.css**:  
+- **shared.css**:
    This was an attempt at centralizing some of the recurring and overlapping styles but only with moderate success.
-- **Rest of the CSS files**:  
+- **Rest of the CSS files**:
    The rest of the styling files relate directly to their respective namesake components.
 
 
 ##### Other Files
 
-- **Overview**  
+- **Overview**
    The project also includes a lot of files that came with React, Vite, SQLite, and Node.js etc. I must admit I have no idea what most of these files do.
