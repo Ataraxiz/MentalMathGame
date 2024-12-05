@@ -1,0 +1,51 @@
+:root {
+  --background-color: #2C2C2C;
+  --menu-background: #3E3E3E;
+  --text-color: #177c55;
+  /* Button styles */
+  --button-background: rgba(45, 90, 39, 0.1);
+  --button-background-hover: rgba(45, 90, 39, 0.3);
+  --button-border-color: #0a5e3e;
+  --button-shadow: rgba(0, 0, 0, 0.2);
+  --button-padding: 1rem 3rem;
+  --button-width: 280px;
+  --button-border-radius: 12px;
+  --button-font-size: 1.3rem;
+  --transition-speed: 0.2s;
+  --button-padding-small: 0.8rem 2rem;
+  --button-width-small: 180px;
+  --button-font-size-small: 1.1rem;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+/* Reset all default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--background-color);
+  overflow: hidden;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}

@@ -1,0 +1,226 @@
+:root {
+  --menu-width: 40%;
+  --headline-font-size: 4rem;
+}
+
+/* Layout Containers
+----------------------------------------*/
+.main-menu {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--background-color);
+  padding: 2rem;
+}
+
+.menu-container, .game-screen-container {
+  width: 40%;
+  min-height: fit-content;
+  max-height: 90vh;
+  padding: 2rem;
+  margin: 2rem 0;
+  background: var(--menu-background);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid var(--button-border-color);
+  overflow-y: auto;
+}
+
+/* Button Styles
+----------------------------------------*/
+/* Base button styles */
+.menu-button, .menu-button-small {
+  border: 2px solid var(--button-border-color);
+  border-radius: var(--button-border-radius);
+  background: var(--button-background);
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Large button variant */
+.menu-button {
+  padding: var(--button-padding);
+  font-size: var(--button-font-size);
+  width: var(--button-width);
+}
+
+/* Small button variant */
+.menu-button-small {
+  padding: var(--button-padding-small);
+  font-size: var(--button-font-size-small);
+  width: var(--button-width-small);
+  min-width: 160px;
+}
+
+/* Button states */
+.menu-button:hover,
+.menu-button-small:hover {
+  background: var(--button-background-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px var(--button-shadow);
+}
+
+.menu-button:active,
+.menu-button-small:active {
+  transform: translateY(0);
+}
+
+.menu-button-small.selected {
+  background: var(--text-color);
+  color: white;
+}
+
+.menu-button-small:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Section Layout Components
+----------------------------------------*/
+.mode-section {
+  margin: .4rem;
+}
+
+.mode-section:last-of-type {
+  margin-bottom: 1rem;
+}
+
+.button-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.navigation-buttons {
+  margin-top: auto;
+  padding-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.game-controls {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Typography
+----------------------------------------*/
+.mode-subtitle {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.mode-description {
+  min-height: 2rem;
+  margin-top: 1rem;
+  text-align: center;
+  color: var(--text-color);
+  opacity: 0.8;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+/* Update dropdown styles */
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: var(--menu-background);
+  border: 2px solid var(--button-border-color);
+  border-radius: var(--button-border-radius);
+  margin-top: 0.5rem;
+  z-index: 1000;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.dropdown-item {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dropdown-item:hover {
+  background: var(--button-background-hover);
+}
+
+.dropdown-item.selected {
+  background: var(--text-color);
+  color: white;
+}
+
+.dropdown-arrow {
+  font-size: 0.8em;
+  margin-left: 0.3rem;
+}
+
+.game-title {
+  font-size: var(--headline-font-size);
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+/* Add this to your dropdown styles */
+.dropdown-menu-up {
+  position: absolute;
+  bottom: 100%; /* Position above instead of below */
+  top: auto;    /* Override default top positioning */
+  margin-top: 0;
+  margin-bottom: 0.5rem; /* Add margin to bottom instead of top */
+}
+
+/* Add checkbox styles for multi-select dropdowns */
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--button-border-color);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+  background: var(--button-background);
+}
+
+.dropdown-item.selected .checkbox {
+  background: var(--text-color);
+  border-color: var(--text-color);
+}

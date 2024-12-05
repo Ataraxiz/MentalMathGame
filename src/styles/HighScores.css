@@ -1,0 +1,145 @@
+.scores-nav {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0 2rem 0;
+  justify-content: center;
+}
+
+.nav-button {
+  width: 100%;
+  padding: 0.8rem 1.5rem;
+  background: var(--button-background);
+  border: 2px solid var(--button-border-color);
+  border-radius: var(--button-border-radius);
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.4rem;
+}
+
+.nav-button:hover {
+  background: var(--button-background-hover);
+}
+
+.nav-button.selected {
+  background: var(--text-color);
+  color: white;
+}
+
+.highscores-container {
+  margin: 0 0 2rem 0;
+  width: 100%;
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 0 1rem;
+  box-shadow: inset 0 -10px 10px -10px rgba(0, 0, 0, 0.1);
+}
+
+.highscores-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  color: var(--text-color);
+  min-height: 200px;
+}
+
+.highscores-table thead {
+  position: sticky;
+  top: 0;
+  background: var(--menu-background);
+  z-index: 1;
+}
+
+.highscores-table th {
+  padding: 0.8rem;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  border-bottom: 2px solid var(--button-border-color);
+}
+
+.highscores-table td {
+  padding: 0.8rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(23, 124, 85, 0.2);
+}
+
+.highscores-table tbody tr:hover {
+  background: rgba(23, 124, 85, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+.highscores-table td:first-child {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.dropdown-container {
+  width: 200px;
+  overflow: visible !important;
+}
+
+.dropdown-menu {
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--menu-background);
+  border: 2px solid var(--button-border-color);
+  border-radius: var(--button-border-radius);
+  margin-top: 0.5rem;
+  z-index: 1000;
+  overflow: visible !important;
+  max-height: none !important;
+}
+
+.dropdown-item {
+  width: 100%;
+  padding: 0.8rem 1.5rem;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background: var(--button-background-hover);
+}
+
+.dropdown-item.selected {
+  background: var(--text-color);
+  color: white;
+}
+
+.dropdown-item:not(:last-child) {
+  border-bottom: 1px solid rgba(23, 124, 85, 0.2);
+}
+
+.dropdown-arrow {
+  font-size: 0.8em;
+  margin-left: 0.3rem;
+}
+
+.highscores-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.highscores-container::-webkit-scrollbar-track {
+  background: rgba(23, 124, 85, 0.1);
+  border-radius: 4px;
+}
+
+.highscores-container::-webkit-scrollbar-thumb {
+  background: var(--text-color);
+  border-radius: 4px;
+}
+
+.highscores-container::-webkit-scrollbar-thumb:hover {
+  background: var(--button-border-color);
+}

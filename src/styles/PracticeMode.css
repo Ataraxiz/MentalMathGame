@@ -1,0 +1,18 @@
+.menu-container {
+    width: 40%;
+    min-height: fit-content;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  
+  .mode-section {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+  
+  .navigation-buttons {
+    margin-top: auto;
+    padding-top: 2rem;
+    width: 100%;
+  }
+  

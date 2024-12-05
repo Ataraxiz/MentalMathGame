@@ -1,0 +1,216 @@
+/* Basic container layout */
+.game-over {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 0;
+  margin-top: -5rem;
+  
+}
+
+.game-over h2 {
+  margin: 0;
+  font-size: 3.5rem;
+}
+
+.game-over > p {
+  margin: 0;
+}
+
+/* Stats layout */
+.game-over-stats {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.game-over-stats p {
+  margin: 0;
+  white-space: nowrap;
+  font-size: 1.6rem;
+  color: var(--text-color);
+}
+
+/* Buttons layout */
+.game-over-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Table styles */
+.problem-history table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--button-border-color);
+}
+
+.problem-history th,
+.problem-history td {
+  padding: 8px 4px;
+  text-align: center;
+  border: 1px solid var(--button-border-color);
+  color: var(--text-color);
+}
+
+/* Color coding for correct/incorrect answers */
+.problem-history tr.correct {
+  background: rgba(0, 255, 0, 0.1);  /* Subtle green */
+}
+
+.problem-history tr.incorrect {
+  background: rgba(255, 0, 0, 0.1);  /* Subtle red */
+}
+
+/* Table header styling */
+.problem-history th {
+  background: var(--menu-background);
+  font-weight: bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+
+/* Position the sort indicators */
+.sort-indicator {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Table container */
+.problem-history {
+  width: 100%;
+  height: 250px;  /* Fixed height */
+  overflow-y: auto;
+  margin: 0;
+}
+
+/* Make table header stick to top while scrolling */
+.problem-history table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--button-border-color);
+}
+
+/* Add custom scrollbar styling */
+.problem-history::-webkit-scrollbar {
+  width: 8px;
+}
+
+.problem-history::-webkit-scrollbar-track {
+  background: var(--menu-background);
+}
+
+.problem-history::-webkit-scrollbar-thumb {
+  background: var(--button-border-color);
+  border-radius: 4px;
+}
+
+/* Sortable table headers */
+.problem-history th {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  padding-right: 20px; /* Make room for sort indicator */
+}
+
+.problem-history th:hover {
+  background: var(--button-background-hover);
+}
+
+/* Update column widths with Nr. as first column */
+.problem-history th:nth-child(1),
+.problem-history td:nth-child(1) {
+  width: 10%;  /* Nr. column */
+}
+
+.problem-history th:nth-child(2),
+.problem-history td:nth-child(2) {
+  width: 30%;  /* Problem column */
+}
+
+.problem-history th:nth-child(3),
+.problem-history td:nth-child(3),
+.problem-history th:nth-child(4),
+.problem-history td:nth-child(4) {
+  width: 20%;  /* Solution and Your Answer columns */
+}
+
+.problem-history th:nth-child(5),
+.problem-history td:nth-child(5) {
+  width: 20%;  /* Time column */
+}
+
+.save-score-section {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.username-input-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.username-input-container input {
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.save-success {
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+/* Disabled state styles */
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.username-input {
+  margin: 0.5rem 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.username-input button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--button-background);
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.username-input button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: var(--button-background-disabled);
+  border: 2px solid ;
+}
+
+.username-input input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  width: 200px;
+}
+
+.username-input input:focus {
+  outline: none;
+  border-color: #666;
+}
